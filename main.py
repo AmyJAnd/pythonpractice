@@ -17,11 +17,12 @@ import random
 playAgain = "Y"
 userWins = 0
 computerWins = 0
+computerChoice = "Z"
 
 while playAgain.upper() == "Y":
     userChoice = input("Choose Rock(R), Paper(P) or Scissors(S): ")
 
-#error check that the right letters have been put in and ask again
+# error check that the right letters have been put in and ask again
     while userChoice.upper() != "R" and userChoice.upper() != "P" and userChoice.upper() != "S":
         print("That's not a correct input.")
         userChoice = input("Choose Rock(R), Paper(P) or Scissors(S): ")
