@@ -54,40 +54,21 @@ def solution(N):
             N = int(s + '5')
             return N
     else:
-        if int(s[-1])<=5:
+        c = 1
+        while c < len(s):
+            for i in s[1:len(s)+1]:
+                if int(i)>=5:
+                    N=s[:c]+'5'+s[c:]
+                    N=int(N)
+                    return N
+                else:
+                    c=c+1
+        if c==len(s):
             N = s + '5'
             return N
-        else:
-            c = -1
-            while c > -len(s)+1:
-                for i in s[-len(s)+1:-1]:
-                    if int(i)<=5:
-                        N=s[:c]+'5'+s[c:]
-                        N=int(N)
-                        return N
-                    else:
-                        c=c-1
-            if c==-len(s)+1:
-                N = s[0]+'5'+s[1:]
-                return N
-# s ='-123'
-# print(s[-1])
-#
-print(solution(88554))
+
+print(solution(-263))
 
 
 
 
-#
-# N=879
-# s=str(N)
-#
-# c=0
-# for i in s[0:len(s)]:
-#         if int(i)<5:
-#             N=s[:c]+'5'+s[c:]
-#             N=int(N)
-#         else:
-#             c = c+1
-#
-# print(N)
